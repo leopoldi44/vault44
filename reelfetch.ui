@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1096</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ReelFetch</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayoutMain">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabActivityLog">
+       <attribute name="title">
+        <string>Activity Log</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutActivityLog">
+        <item>
+         <widget class="QTextEdit" name="activityLogTextEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMovieList">
+       <attribute name="title">
+        <string>Movie List</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutMovieList">
+        <item>
+         <widget class="QTextEdit" name="movieListTextEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="saveMovieListButton">
+          <property name="text">
+           <string>Save List</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabNextUp">
+       <attribute name="title">
+        <string>Next Up</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutNextUp">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutNextUpControls">
+          <item>
+           <widget class="QComboBox" name="genreComboBox">
+            <property name="placeholderText" stdset="0">
+             <string>Select Genre</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="yearLineEdit">
+            <property name="placeholderText">
+             <string>Year</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="nationComboBox">
+            <property name="placeholderText" stdset="0">
+             <string>Select Nation</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="nextUpTextEdit"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutNextUpButtons">
+          <item>
+           <widget class="QPushButton" name="generateNextUpButton">
+            <property name="text">
+             <string>Generate List</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveNextUpButton">
+            <property name="text">
+             <string>Save List</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabRecommendations">
+       <attribute name="title">
+        <string>Recommendations</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutRecommendations">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutRecommendationsControls">
+          <item>
+           <widget class="QComboBox" name="recGenreComboBox">
+            <property name="placeholderText" stdset="0">
+             <string>Select Genre</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="recYearLineEdit">
+            <property name="placeholderText">
+             <string>Year</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="recNationComboBox">
+            <property name="placeholderText" stdset="0">
+             <string>Select Nation</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="recommendationsTextEdit"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutRecommendationsButtons">
+          <item>
+           <widget class="QPushButton" name="generateRecommendationsButton">
+            <property name="text">
+             <string>Generate List</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveRecommendationsButton">
+            <property name="text">
+             <string>Save List</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTorrentTracker">
+       <attribute name="title">
+        <string>Torrent Tracker</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutTorrentTracker">
+        <item>
+         <widget class="QTextEdit" name="torrentTrackerTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabSettings">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutSettings">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutSaveFolder">
+          <item>
+           <widget class="QLabel" name="labelSaveFolder">
+            <property name="text">
+             <string>Save Folder:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="saveFolderLineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="changeSaveFolderButton">
+            <property name="text">
+             <string>Change</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutMaxTorrent">
+          <item>
+           <widget class="QLabel" name="labelMaxTorrent">
+            <property name="text">
+             <string>Max Torrents:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="maxTorrentLineEdit"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

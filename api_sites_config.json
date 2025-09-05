@@ -1,0 +1,44 @@
+[
+    {
+        "name": "TPB",
+        "type": "api",
+        "enabled": true,
+        "search_url": "https://apibay.org/q.php?q={query}",
+        "result_selector": "",
+        "download_selector": "",
+        "link_attr": ""
+    },
+    {
+        "name": "YTS.mx",
+        "type": "api",
+        "enabled": true,
+        "search_url": "https://yts.mx/api/v2/list_movies.json?query_term={query}",
+        "result_selector": "data.movies",
+        "download_selector": "torrents.url",
+        "link_attr": "url",
+        "qBittorrent": {
+            "host": "http://127.0.0.1:8080",
+            "username": "admin",
+            "password": "adminadmin",
+            "save_path": "downloads"
+        }
+    },
+    {
+        "name": "Archive.org",
+        "type": "api",
+        "enabled": true,
+        "search_url": "https://archive.org/advancedsearch.php?q={query}+mediatype%3Amovies&fl[]=identifier&fl[]=title&fl[]=year&fl[]=language&rows=20&page=1&output=json",
+        "result_selector": "response.docs",
+        "download_selector": "identifier",
+        "link_attr": "identifier"
+    },
+    {
+        "name": "1337x",
+        "type": "rss",
+        "enabled": true,
+        "search_url": "https://1337x.to/rss/{query}/",
+        "result_selector": "rss.channel.item",
+        "download_selector": "magnet",
+        "link_attr": "link"
+    }
+]
